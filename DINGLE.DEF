@@ -1,0 +1,6 @@
+NAME         Dingle WINDOWCOMPAT NEWFILES
+DESCRIPTION  'Description Field'  
+HEAPSIZE     2048                 
+STACKSIZE    32000                
+EXETYPE      OS2            
+

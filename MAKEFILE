@@ -1,0 +1,30 @@
+all: dingle.exe
+
+#
+#compress.obj : compress.c 
+#   cl /AL /W3 /c /Od /Zip /nologo compress.c
+#
+#dingle.obj : dingle.c
+#   cl /AL /W3 /c /Od /Zip /nologo dingle.c
+#
+#arg2.obj : arg2.c
+#   cl /AL /W3 /c /Od /Zip /nologo arg2.c
+#
+#dingle.exe : dingle.obj compress.obj arg2.obj
+#   link dingle Compress arg2 setargv/CO,,NUL,os2 llibcep implode/nod/noe/nologo,$*.def
+#
+#
+#
+
+
+compress.obj : compress.c 
+   cl /AL /W3 /c /Oxaz /G2rs /nologo $*.c
+
+dingle.obj : dingle.c
+   cl /AL /W3 /c /Oxaz /G2rs /nologo $*.c
+
+arg2.obj : arg2.c
+   cl /AL /W3 /c /Oxaz /G2rs /nologo $*.c
+
+dingle.exe : dingle.obj compress.obj arg2.obj
+   link dingle Compress arg2 setargv/E/PACKC/PACKD,,NUL,os2 llibcep implode/nod/noe/nologo,$*.def
